@@ -14,6 +14,5 @@ for order in orders.copy():
     else:
         print(f"Orders left: {' '.join(map(str, orders))}")
         break
-
-if not orders:
+else:    
     print('Orders complete')
