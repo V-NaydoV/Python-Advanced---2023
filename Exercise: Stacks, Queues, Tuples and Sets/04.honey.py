@@ -21,13 +21,12 @@ while nectars and bees:
     if bee > nectar:
         bees.appendleft(bee)
         continue
-    symbol = symbols.popleft()
-    collected_nectar += abs(symbols_dict[symbol](bee, nectar))
+    elif nectar > bee:
+        symbol = symbols.popleft()
+        collected_nectar += abs(symbols_dict[symbol](bee, nectar))
 
 print(f"Total honey made: {collected_nectar}")
 if bees:
     print(f"Bees left: {', '.join(map(str, bees))}")
 if nectars:
     print(f"Nectar left: {', '.join(map(str, nectars))}")
-
-
