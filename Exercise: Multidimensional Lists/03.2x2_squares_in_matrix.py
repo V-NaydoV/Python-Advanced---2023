@@ -9,4 +9,4 @@ for i in range(rows-1):
         if matrix[i][j+1] == symbol and matrix[i+1][j] == symbol and matrix[i+1][j+1] == symbol:
             equal_square_blocks += 1
             
-print(equal_square_blocks)
+print(equal_square_blocks) 
