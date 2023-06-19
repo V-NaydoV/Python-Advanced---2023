@@ -1,10 +1,6 @@
 def grocery_store(**kwargs):
     kwargs = sorted(kwargs.items(), key=lambda x: (-x[1], -len(x[0]), x[0]))
-    result = []
-    for product, quantity in kwargs:
-        result.append(f'{product}: {quantity}')
-
-    return '\n'.join(result)
+    return '\n'.join([f'{p}: {q}' for p, q in kwargs])
 
 
 print(grocery_store(
@@ -12,4 +8,5 @@ print(grocery_store(
     pasta=12,
     eggs=12,
 ))
+
 
